@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Бронирование путешествия</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Забронируйте свое путешествие!</h1>
+    <form action="#">
+        <fieldset>
+            <legend>Личные данные</legend>
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Ваш email:</label>
+            <input type="email" id="email" name="email" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Детали путешествия</legend>
+            <label for="type">Тип путешествия:</label>
+            <select id="type" name="type">
+                <option value="Экскурсионный тур">Экскурсионный тур</option>
+                <option value="Пляжный отдых" selected>Пляжный отдых</option>
+                <option value="Приключения">Приключения</option>
+                <option value="Круиз">Круиз</option>
+            </select>
+
+            <label for="hotel">Выбор отеля:</label>
+            <select id="hotel" name="hotel">
+                <option value="Luxury Resort">Luxury Resort</option>
+                <option value="Beach Villa">Beach Villa</option>
+                <option value="Eco Lodge">Eco Lodge</option>
+            </select>
+
+            <label for="travelers">Количество путешественников:</label>
+            <input type="number" id="travelers" name="travelers" min="1" max="10" step="1">
+
+            <label for="date">Дата начала путешествия:</label>
+            <input type="date" id="date" name="date">
+        </fieldset>
+
+        <fieldset>
+            <legend>Дополнительно</legend>
+            <label for="notes">Ваши пожелания:</label>
+            <textarea id="notes" name="notes" rows="4"></textarea>
+
+            <label>
+                <input type="checkbox" name="insurance" id="insurance">
+                Страховка (+10% к стоимости)
+            </label><br>
+
+            <input type="checkbox" id="agree" name="agree" required>
+            <label for="agree">Я согласен на обработку моих персональных данных.</label>
+        </fieldset>
+
+        <button type="submit">Забронировать</button>
+    </form>
+</body>
+</html>
